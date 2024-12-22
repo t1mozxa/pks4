@@ -13,7 +13,6 @@ class AddProductPage extends StatefulWidget {
 class _AddProductPageState extends State<AddProductPage> {
   final _formKey = GlobalKey<FormState>();
 
-  // Контроллеры для каждого поля
   final nameController = TextEditingController();
   final descriptionController = TextEditingController();
   final imageUrlController = TextEditingController();
@@ -93,7 +92,7 @@ class _AddProductPageState extends State<AddProductPage> {
                 ElevatedButton(
                   onPressed: () {
                     if (_formKey.currentState?.validate() ?? false) {
-                      // Создаем новый продукт
+                      
                       final newProduct = FishingProduct(
                         name: nameController.text,
                         description: descriptionController.text,
@@ -104,10 +103,9 @@ class _AddProductPageState extends State<AddProductPage> {
                         materials: materialsController.text,
                       );
 
-                      // Отправляем новый продукт в главный экран
+                     
                       widget.onProductAdded(newProduct);
 
-                      // Закрываем экран добавления товара
                       Navigator.pop(context);
                     }
                   },
