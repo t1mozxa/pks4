@@ -25,7 +25,7 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.blueGrey,
         title: const Center(
           child: Text(
-            'Fishing Gear',
+            'Рыболовные товары',
             style: TextStyle(color: Colors.white),
           ),
         ),
