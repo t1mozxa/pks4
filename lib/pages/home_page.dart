@@ -10,13 +10,11 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  // Список продуктов будет храниться в состоянии
   List<FishingProduct> products = fishingProducts;
 
-  // Метод для обновления списка продуктов
   void addProduct(FishingProduct product) {
     setState(() {
-      products.add(product);  // Добавляем новый товар в список
+      products.add(product);  
     });
   }
 
@@ -50,7 +48,6 @@ class _HomePageState extends State<HomePage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          // При нажатии открываем форму добавления товара
           Navigator.push(
             context,
             MaterialPageRoute(builder: (context) => AddProductPage(onProductAdded: addProduct)),
